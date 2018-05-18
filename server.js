@@ -52,11 +52,10 @@ app.get('/', (req, res) => {
 
 if(process.env.NODE_ENV === "production"){
     console.log("I am in a production environment!!!!!")
-    const my_path = (path.join(__dirname, 'client', 'build'))
-    console.log(my_path)
+    const my_path = (path.join(__dirname, 'build'))
     app.use(express.static(my_path));
 
-    app.get('/', (req, res) => {
+    app.get('/', function (req, res) {
         res.sendFile(path.join(my_path, 'index.html'));
     });
 }
