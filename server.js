@@ -15,8 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
 // Create our Express application
 const app = express();
 
-// Use environment defined port or 5000
-const port = process.env.PORT || 5000;
+
 
 // Connect to a MongoDB
 mongoose.connect(process.env.DB_STRING, { useMongoClient: true});
@@ -51,6 +50,20 @@ app.get('/', (req, res) => {
 });
 */
 
+if(process.env.NODE_ENV === "production"){
+    console.log("I am in a production environment!!!!!")
+    const my_path = (path.join(__dirname, 'client', 'build'))
+    console.log(my_path)
+    app.use(express.static(my_path));
+
+    app.get('/', (req, res) => {
+        res.sendFile(path.join(my_path, 'index.html'));
+    });
+}
+else{
+    console.log("NOT PRODUCTION!")
+}
+
+
 // Start the server
-app.listen(port);
-console.log('Server running on port ' + port);
+app.listen(process.env.PORT || 5000)
