@@ -16,6 +16,7 @@ if (process.env.NODE_ENV !== 'production') {
 // Create our Express application
 const app = express();
 
+/*
 const allowCrossDomain = (req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept");
@@ -23,7 +24,7 @@ const allowCrossDomain = (req, res, next) => {
     next();
 };
 app.use(allowCrossDomain);
-
+*/
 
 // Connect to a MongoDB
 mongoose.connect(process.env.DB_STRING, { useMongoClient: true});
