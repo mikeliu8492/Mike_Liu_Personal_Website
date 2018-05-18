@@ -10,7 +10,7 @@ const Redirect = () => {
         </div>
         <br/>
         <br/>
-        <p>This is not the page you are looking for (i.e. the resource does not exist)</p>
+        <p>This is not the page you are looking for (i.e. the permissible resource does not exist)</p>
         <Link to="/home">Home</Link>
         </div>)
 }

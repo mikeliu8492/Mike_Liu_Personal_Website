@@ -1,15 +1,11 @@
 {
   "main.css": "static/css/main.3ce35942.css",
   "main.css.map": "static/css/main.3ce35942.css.map",
-  "main.js": "static/js/main.993bf2c4.js",
-  "main.js.map": "static/js/main.993bf2c4.js.map",
-  "static\\media\\ALIQ.JPG": "static/media/ALIQ.951ffd6d.JPG",
+  "main.js": "static/js/main.09e0687c.js",
+  "main.js.map": "static/js/main.09e0687c.js.map",
   "static\\media\\ILLINI.jpg": "static/media/ILLINI.541a32d1.jpg",
-  "static\\media\\chess.JPG": "static/media/chess.94f838d5.JPG",
-  "static\\media\\epic.png": "static/media/epic.747de171.png",
   "static\\media\\favicon.ico": "static/media/favicon.c92b85a5.ico",
   "static\\media\\interview.jpg": "static/media/interview.a514c2b2.jpg",
   "static\\media\\mern.png": "static/media/mern.0c657800.png",
-  "static\\media\\minesweeper.JPG": "static/media/minesweeper.3e932dbc.JPG",
   "static\\media\\tachyons.png": "static/media/tachyons.fac435c0.png"
 }

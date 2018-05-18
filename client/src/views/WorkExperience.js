@@ -1,14 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-import IMO from '../images/work/IMO.png'
-import microsoft from '../images/work/microsoft.png'
-import epic from '../images/work/epic.png'
-
 const companyArray = [
-    {picture: epic, name: "Epic Systems (incoming developer, stay tuned for updates coming up soon!)", alternateText: "Epic Systems", linkUrl: "/work"},
-    {picture: microsoft, name: "Microsoft",  alternateText: "Microsoft", linkUrl: "/microsoft"},
-    {picture: IMO, name: "Intelligent Medical Objects", alternateText: "Intelligent Medical Objects", linkUrl: "/imo"},
+    {picture: "https://drive.google.com/uc?id=1TwegjwZzM-UiB7BPXHYoXo-kRpo65C8B", name: "Epic Systems (incoming developer, stay tuned for updates coming up soon!)", alternateText: "Epic Systems", linkUrl: "/work"},
+    {picture: "https://drive.google.com/uc?id=1j_PWu67Hhp7l-3paWKw54rh0UQvkoFeZ", name: "Microsoft",  alternateText: "Microsoft", linkUrl: "/microsoft"},
+    {picture: "https://drive.google.com/uc?id=1nGu96qxy6bzcpC8uDvTRrHGy5FaTxOIS", name: "Intelligent Medical Objects", alternateText: "Intelligent Medical Objects", linkUrl: "/imo"},
 ]
 
 const CompanyElement = ({picture, name, alternateText, linkUrl}) => {
