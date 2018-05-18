@@ -24,6 +24,7 @@ const allowCrossDomain = (req, res, next) => {
 };
 app.use(allowCrossDomain);
 
+
 // Connect to a MongoDB
 mongoose.connect(process.env.DB_STRING, { useMongoClient: true});
 
