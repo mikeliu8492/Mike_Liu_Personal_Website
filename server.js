@@ -16,7 +16,13 @@ if (process.env.NODE_ENV !== 'production') {
 // Create our Express application
 const app = express();
 
-
+const allowCrossDomain = (req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "http://mikeliu8492.herokuapp.com/ask_me_anything");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+    next();
+};
+app.use(allowCrossDomain);
 
 // Connect to a MongoDB
 mongoose.connect(process.env.DB_STRING, { useMongoClient: true});
