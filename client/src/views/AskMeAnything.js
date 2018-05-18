@@ -4,7 +4,8 @@ import Axios from 'axios';
 import './AskMeAnything.css';
 import luis from '../images/common/luis.png'
 
-
+let HOST = "http://mikeliu8492.herokuapp.com"
+//let HOST = "http://wwww.localhost:5000"
 
 class AskMeAnything extends React.Component{
 
@@ -25,7 +26,7 @@ class AskMeAnything extends React.Component{
     handleSubmit(event) {
         let payload = encodeURI(this.state.value)
 
-        Axios.post('http://mikeliu8492.herokuapp.com/api/luis', {question: payload})
+        Axios.post(`${HOST}/api/luis`, {question: payload})
         .then (response => {
             this.setState({
                 answer: response.data.message
@@ -74,7 +75,7 @@ class AskMeAnything extends React.Component{
                     <div style={{float: "left", width: "20%"}}>
                         <img src={luis} alt="luis"></img>
                         <div style={{display: "flex", justifyContent: "center"}}>                                                    
-                            <input class="f6 link dim br3 ph3 pv2 mb2 dib white bg-black"type="submit" value="Ask Me A Question!" onClick={this.handleSubmit} style={{display: "block"}}/>
+                            <input className="f6 link dim br3 ph3 pv2 mb2 dib white bg-black"type="submit" value="Ask Me A Question!" onClick={this.handleSubmit} style={{display: "block"}}/>
                         </div>
 
                     </div>

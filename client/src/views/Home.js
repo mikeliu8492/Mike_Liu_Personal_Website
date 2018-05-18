@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
-
 import interview from '../images/home/interview.jpg';
 
 import './Home.css'
