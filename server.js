@@ -42,14 +42,14 @@ app.use(bodyParser.json());
 const api = require('./api.js');
 app.use('/api', api(app, router));
 
-
+/*
 // Serve up the front-end static JS Bundle contents
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
-
+*/
 
 // Start the server
 app.listen(port);
