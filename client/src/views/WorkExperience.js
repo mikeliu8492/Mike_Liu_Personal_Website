@@ -6,7 +6,7 @@ import microsoft from '../images/work/microsoft.png'
 import epic from '../images/work/epic.png'
 
 const companyArray = [
-    {picture: epic, name: "Epic Systems (stay tune updates coming up!)", alternateText: "Epic Systems", linkUrl: "/work"},
+    {picture: epic, name: "Epic Systems (incoming developer, stay tuned for updates coming up soon!)", alternateText: "Epic Systems", linkUrl: "/work"},
     {picture: microsoft, name: "Microsoft",  alternateText: "Microsoft", linkUrl: "/microsoft"},
     {picture: IMO, name: "Intelligent Medical Objects", alternateText: "Intelligent Medical Objects", linkUrl: "/imo"},
 ]
@@ -37,7 +37,7 @@ const WorkExperience = () => {
         <h1>My Career Journey Thusfar</h1>
         <br/>
         <br/>
-        <h3>Places I have been</h3>
+        <h3>Internships and Full-time Opportunities Experienced</h3>
         <br/>
         
         
