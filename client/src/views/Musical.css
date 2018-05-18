@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+.musical {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+audio::-internal-media-controls-download-button {
+    display: none;
+}

@@ -1,0 +1,39 @@
+footer {
+    margin-top: 30px;
+}
+
+#contacts-title {
+    background-color: whitesmoke;
+    margin: 0;
+    text-align: center;
+}
+
+#tachyons-title{
+    background-color: lightskyblue;
+    margin: 0;
+    text-align: center;
+}
+
+#mern-title {
+    background-color: black;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+.icon {
+    max-width: 50px;
+}
+
+ul.contact-icon {
+    padding: 0;
+}
+li.contact-icon {
+    display: inline;
+    margin: 2px;
+}
+
+#tachyons-image {
+    max-height: 138 px;
+    max-width: 250 px;
+}

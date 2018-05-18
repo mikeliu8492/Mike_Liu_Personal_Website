@@ -1,0 +1,13 @@
+.project-picture {
+    max-width: 500px;
+    min-height: 300px;
+    max-height: 400px;
+    padding: 20px;
+    float: left;
+}
+
+
+.project_description {
+    float: right;
+    align-items: center;
+}

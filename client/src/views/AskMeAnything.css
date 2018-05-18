@@ -1,0 +1,13 @@
+#response-box {
+    background-color: rgb(250, 250, 94);
+    min-height: 200px;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+textarea {
+    border-radius: 20px;
+    padding: 25px;
+    min-height: 100px;
+}
