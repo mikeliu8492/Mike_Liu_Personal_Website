@@ -4,6 +4,8 @@ import Axios from 'axios';
 import './AskMeAnything.css';
 import luis from '../images/common/luis.png'
 
+
+
 class AskMeAnything extends React.Component{
 
     constructor(props) {
@@ -23,7 +25,7 @@ class AskMeAnything extends React.Component{
     handleSubmit(event) {
         let payload = encodeURI(this.state.value)
 
-        Axios.post('http://www.localhost:5000/api/luis', {question: payload})
+        Axios.post('http://mikeliu8492.herokuapp.com/api/luis', {question: payload})
         .then (response => {
             this.setState({
                 answer: response.data.message
