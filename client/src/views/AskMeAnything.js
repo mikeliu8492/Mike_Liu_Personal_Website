@@ -4,7 +4,7 @@ import Axios from 'axios';
 import './AskMeAnything.css';
 import luis from '../images/common/luis.png'
 
-let HOST = "http://mikeliu8492.herokuapp.com"
+let HOST = "https://mikeliu8492.herokuapp.com"
 //let HOST = "http://wwww.localhost:5000"
 
 class AskMeAnything extends React.Component{
