@@ -41,11 +41,14 @@ app.use('/api', api(app, router));
 
 // Serve up the front-end static JS Bundle contents
 if(process.env.NODE_ENV === "production"){
+    /*
     app.use(express.static(path.join(__dirname, 'build')));
 
     app.get('/', (req, res) => {
         res.sendFile(path.join(__dirname, 'build', 'index.html'));
     });
+    */
+    app.use(express.static('client/build'));
 }
 else{
     console.log("NOT PRODUCTION!")
