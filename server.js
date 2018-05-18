@@ -39,7 +39,7 @@ app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")))
 const api = require('./api.js');
 app.use('/api', api(app, router));
 
-// Serve up the front-end static JS Bundle contents
+// Serve up the front-end static JS Bundle contents in production environment
 if(process.env.NODE_ENV === "production"){
     app.use(express.static('client/build'));
 
@@ -50,9 +50,7 @@ if(process.env.NODE_ENV === "production"){
             }
           }
         );
-    });
-
-    
+    });    
 }
 else{
     console.log("NOT PRODUCTION!")
