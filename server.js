@@ -33,7 +33,7 @@ const api = require('./api.js');
 app.use('/api', api(app, router));
 
 // Serve up the front-end static JS Bundle contents
-if(process.env.NODE_ENV !== "production"){
+if(process.env.NODE_ENV === "production"){
     app.use(express.static(path.join(__dirname, 'client', 'build')));
 
     app.get('/', (req, res) => {
