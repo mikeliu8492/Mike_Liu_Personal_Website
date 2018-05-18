@@ -1,16 +1,6 @@
 import React, {Component} from 'react';
 import Slideshow from '../components/Slideshow';
 
-import image0 from '../images/food/picture0.jpg';
-import image1 from '../images/food/picture1.jpg';
-import image2 from '../images/food/picture2.jpg';
-import image3 from '../images/food/picture3.jpg';
-import image4 from '../images/food/picture4.jpg';
-import image5 from '../images/food/picture5.jpg';
-import image6 from '../images/food/picture6.jpg';
-import image7 from '../images/food/picture7.jpg';
-import imagination from '../music/pureimagination.mp3'
-
 import './Musical.css'
 
 
@@ -26,14 +16,14 @@ class Food extends Component {
 
     componentWillMount(){
         let list = [
-            image0,
-            image1,
-            image2,
-            image3,
-            image4,
-            image5,
-            image6,
-            image7
+            "https://drive.google.com/uc?id=15Aau4WCnqXHUmx2wzKIjeEkE_16X9jCs",
+            "https://drive.google.com/uc?id=1BfP9-hzknZ5mNuFh9z2WHWG77qapc810",
+            "https://drive.google.com/uc?id=1GdVGif5F0rsvw5mMYx0cT4rk1ScJ1xpX",
+            "https://drive.google.com/uc?id=1gUESkQoPOkYvCdippVQnByyzY6nsGCi5",
+            "https://drive.google.com/uc?id=1fiG50jD3BMzSvWvcJy59hrpoplwECCOa",
+            "https://drive.google.com/uc?id=1vGN99M5fSGL5XBOzdFkIJNewGZGOYWSw",
+            "https://drive.google.com/uc?id=1G5i07OfAj2IxQyBrseWzKY0vwJdqZYvS",
+            "https://drive.google.com/uc?id=1Hov_viqmH3dd_JwMfz0BJsUl-uNPS8GM"
         ]
 
         this.setState({
@@ -55,7 +45,7 @@ class Food extends Component {
             <br/>
     
             <div align="center">
-                <audio src={imagination} controls={true} controlsList="nodownload"></audio>
+                <audio src="https://drive.google.com/uc?id=1S1I8G7F4P-1gxh7xQ93vNs1JDgRaDJAB" controls={true} controlsList="nodownload"></audio>
             </div>
 
             <section>

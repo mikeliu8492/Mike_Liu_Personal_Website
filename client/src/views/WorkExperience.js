@@ -29,8 +29,8 @@ const CompanyElement = ({picture, name, alternateText, linkUrl}) => {
 }
 
 const WorkExperience = () => {
-    const companies = companyArray.map((company) => {
-        return <CompanyElement picture={company.picture} name={company.name} alternateText={company.alternateText} linkUrl={company.linkUrl}/>
+    const companies = companyArray.map((company, index) => {
+        return <CompanyElement key={index} picture={company.picture} name={company.name} alternateText={company.alternateText} linkUrl={company.linkUrl}/>
     })
 
     return (<div>

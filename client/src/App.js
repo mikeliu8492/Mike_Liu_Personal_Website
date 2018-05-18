@@ -18,7 +18,7 @@ import Microsoft from './views/Microsoft';
 import Imo from './views/Imo'
 import Redirect from './views/Redirect'
 
-const google_url = "https://drive.google.com/open?id=1NIE_xCq0cIvcy4LHMEyO-SoprG-kZQkv"
+const google_url = "https://drive.google.com/uc?id=1NIE_xCq0cIvcy4LHMEyO-SoprG-kZQkv"
 
 class App extends Component {
   render() {

@@ -1,25 +1,6 @@
 import React, {Component} from 'react';
 import Slideshow from '../components/Slideshow'
 
-import image0 from '../images/work/microsoft/picture0.jpg';
-import image1 from '../images/work/microsoft/picture1.jpg';
-import image2 from '../images/work/microsoft/picture2.jpg';
-import image3 from '../images/work/microsoft/picture3.jpg';
-import image4 from '../images/work/microsoft/picture4.jpg';
-import image5 from '../images/work/microsoft/picture5.jpg';
-import image6 from '../images/work/microsoft/picture6.jpg';
-import image7 from '../images/work/microsoft/picture7.jpg';
-import image8 from '../images/work/microsoft/picture8.jpg';
-import image9 from '../images/work/microsoft/picture9.jpg';
-import image10 from '../images/work/microsoft/picture10.jpg';
-import image11 from '../images/work/microsoft/picture11.jpg';
-import image12 from '../images/work/microsoft/picture12.jpg';
-import image13 from '../images/work/microsoft/picture13.jpg';
-import image14 from '../images/work/microsoft/picture14.jpg';
-import image15 from '../images/work/microsoft/picture15.jpg';
-import pearls from '../music/pearlsofjoy.mp3'
-
-
 class Microsoft extends Component{
     
     constructor(){
@@ -31,22 +12,22 @@ class Microsoft extends Component{
 
     componentWillMount(){
         let list = [
-           image0,
-           image1,
-           image2,
-           image3,
-           image4,
-           image5,
-           image6,
-           image7,
-           image8,
-           image9,
-           image10,
-           image11,
-           image12,
-           image13,
-           image14,
-           image15
+           "https://drive.google.com/uc?id=17YtaqRUBe_jbhr3qH-vYcBVouv7KBrgc",
+           "https://drive.google.com/uc?id=1SjlbosB2d8MDFThr6G0ciM9HhKcWqY9D",
+           "https://drive.google.com/uc?id=1vMrXXdAlo2V9uVyZvG5UfZARzC4y-BCi",
+           "https://drive.google.com/uc?id=1WClYGlxLG1Fqs9YX152byFys82vxZyCW",
+           "https://drive.google.com/uc?id=15ReP3tYzIuSlBUE9tO7VVIiXTBmwxoW5",
+           "https://drive.google.com/uc?id=1zyz1c-LHQvw_EcLC1sx5pu7XVb9BCzjB",
+           "https://drive.google.com/uc?id=1nn-N_k9Br9guaDq6nrdrbUwMzidkuR3r",
+           "https://drive.google.com/uc?id=1lP9ePsNlsQev_28oh0vltNHbYmK4HEk_",
+           "https://drive.google.com/uc?id=1tdHWRLilFu-kI25YsVAH3tnRWpm4p2iB",
+           "https://drive.google.com/uc?id=1eyL_Et0ggXOybp5fQ2XcvtfUTNakypPF",
+            "https://drive.google.com/uc?id=1RffADjcEY3SqlLGyxUA-wRnoYf-wi8o6",
+            "https://drive.google.com/uc?id=1Brt5sIHOBP6i3rK7ZrX_PXfng0kLUIam",
+            "https://drive.google.com/uc?id=1yj16ui62qgT9_V1plIaBi662ymmg6cjK",
+            "https://drive.google.com/uc?id=1CGHOK-_5V4-6xqq18ATEiilvmUzaxOVe",
+            "https://drive.google.com/uc?id=1RJnZrCqR8NGFaZ7-UTNQuTlp7bwUDn21",
+            "https://drive.google.com/uc?id=1zZN3MwO-ANPyIpBufLwshM8WkO7CjGiu"
        ]
 
         this.setState({
@@ -87,7 +68,7 @@ class Microsoft extends Component{
             </p>
             
             <div align="center">
-                <audio src={pearls} controls={true} controlsList="nodownload"></audio>
+                <audio src="https://drive.google.com/uc?id=1qU2aETXCQ6A65k6P_frX2d8DTbGzVMC7" controls={true} controlsList="nodownload"></audio>
             </div>
 
             </section>

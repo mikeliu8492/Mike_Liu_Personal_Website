@@ -1,15 +1,6 @@
 import React, {Component} from 'react';
 import Slideshow from '../components/Slideshow'
 
-import image0 from '../images/work/imo/picture0.jpg';
-import image1 from '../images/work/imo/picture1.jpg';
-import image2 from '../images/work/imo/picture2.jpg';
-import image3 from '../images/work/imo/picture3.jpg';
-import image4 from '../images/work/imo/picture4.jpg';
-import image5 from '../images/work/imo/picture5.jpg';
-import image6 from '../images/work/imo/picture6.jpg';
-
-
 class Imo extends Component{
     
     constructor(){
@@ -21,13 +12,13 @@ class Imo extends Component{
 
     componentWillMount(){
         let list = [
-           image0,
-           image1,
-           image2,
-           image3,
-           image4,
-           image5,
-           image6,
+            "https://drive.google.com/uc?id=1J-elc7LPIRy-__ie-MIwWHBH7mOML3pC",
+            "https://drive.google.com/uc?id=199DjdThzCXqQCEgeHiMZ6z9jHL40LeGx",
+            "https://drive.google.com/uc?id=1AkhjV-fW_UFrBdGSHaBopTnCcqrX4zLL",
+            "https://drive.google.com/uc?id=1h0XRehe8tPAjIXxIFcGb3ORTukEPnwO9",
+            "https://drive.google.com/uc?id=1c4RwzVNQkg2Gsvr7V-UgLzHhCnfFI2Zg",
+            "https://drive.google.com/uc?id=1fxeKvldi5mSPXw6fHxblfrMZNTfV1slY",
+            "https://drive.google.com/uc?id=13PiSzAWYysbFTHbIzHlxbqZvFxyJeIJ4"
        ]
 
         this.setState({

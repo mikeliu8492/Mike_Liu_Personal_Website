@@ -33,8 +33,6 @@ class AskMeAnything extends React.Component{
             })
         })
         .catch(err => {
-            //TODO finish up stuff
-            alert(err.toString())
             this.setState({
                 answer: `Something went wrong; please try again later.`
             })
