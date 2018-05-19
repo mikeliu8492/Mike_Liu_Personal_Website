@@ -19,9 +19,17 @@ const app = express();
 const secure = require('express-force-https');
 app.use(secure)
 
+let HOST = ""
+if (process.env.NODE_ENV === 'production'){
+    HOST = "http://mikeliu8492.herokuapp.com"
+}
+else {
+    HOST = "http://wwww.localhost:5000"
+}
+
 
 const allowCrossDomain = (req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "http://mikeliu8492.herokuapp.com");
+    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept");
     res.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
     next();

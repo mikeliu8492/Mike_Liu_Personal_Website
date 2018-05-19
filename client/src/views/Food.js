@@ -3,6 +3,13 @@ import Slideshow from '../components/Slideshow';
 
 import './Musical.css'
 
+let HOST = ""
+if (process.env.NODE_ENV === 'production'){
+    HOST = "http://mikeliu8492.herokuapp.com"
+}
+else {
+    HOST = "http://wwww.localhost:5000"
+}
 
 
 class Food extends Component {
@@ -10,7 +17,8 @@ class Food extends Component {
     constructor(){
         super()
         this.state = {
-            images: []
+            images: [],
+            endpoint: `${HOST}/api/gallery/5aff8d0f8d807d09d4723fb0`        
         }
     }
 
@@ -32,7 +40,6 @@ class Food extends Component {
     }
 
     render() {
-        
         return (<div>
             <h1>Your Virtual Food Tour With Music</h1>
             

@@ -1,5 +1,5 @@
-
-const Fact = require('./fact')
+const Fact = require('./models/fact')
+const Gallery = require('./models/gallery')
 const axios = require('axios');
 
 if (process.env.NODE_ENV !== 'production') {
@@ -31,8 +31,7 @@ module.exports = (app, router) => {
         })
         .catch(err => {
             return res.status(200).json({message: `I got an error: ${err.toString()}`})
-        })
-        
+        })    
     })
 
     // Delete page route.
@@ -41,6 +40,66 @@ module.exports = (app, router) => {
     })
 
     // TODO:  Create an update endpoint
+
+
+
+
+
+    // Galleries
+    router.get('/gallery', (req, res) => {
+        Gallery.find().exec()
+        .then(result => {
+            return res.status(200).json(result)
+        })
+        .catch(err => {
+            return res.status(200).json({message: `I got an error: ${err.toString()}`})
+        })
+    })
+
+    // Gallery by Id
+    router.get('/gallery/:_id', (req, res) => {
+        Gallery.findById(req.params._id).exec()
+        .then(result => {
+            return res.status(200).json(result)
+        })
+        .catch(err => {
+            return res.status(200).json({message: `I got an error: ${err.toString()}`})
+        })
+    })
+
+
+
+    // Create Galleries
+    router.post('/gallery', (req, res) => {
+
+        let gallery = req.body;
+
+        Gallery.create(gallery)
+        .then(result => {
+            return res.status(201).json({message: "I created a fact", result: gallery})
+        })
+        .catch(err => {
+            return res.status(200).json({message: `I got an error: ${err.toString()}`})
+        })    
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // This endpoint call the luis bot and passes it the function
     router.post('/luis', (req, res) => {
