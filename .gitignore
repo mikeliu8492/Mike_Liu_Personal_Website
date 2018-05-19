@@ -1,2 +1,6 @@
 /node_modules
 .env
+.rnd
+mike-key.pem
+mike-cert.pem
+mike-csr.pem

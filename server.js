@@ -3,9 +3,11 @@ const express = require('express'),
     router = express.Router(),
     mongoose = require('mongoose'),
     path = require('path'),
-    bluebird = require('bluebird')
-    bodyParser = require('body-parser')
-    favicon = require('serve-favicon');
+    bluebird = require('bluebird'),
+    bodyParser = require('body-parser'),
+    favicon = require('serve-favicon'),
+    https = require('https'),
+    fs = require('fs');
 
 mongoose.Promise = bluebird
 
@@ -68,6 +70,15 @@ else{
     console.log("NOT PRODUCTION!")
 }
 
+/*
+let httpsOptions = {
+    key: fs.readFileSync('mike-key.pem'),  
+    cert: fs.readFileSync('mike-cert.pem') 
+}*/
 
+
+app.listen(process.env.PORT || 5000 )
+
+//const server = https.createServer(httpsOptions, app)
 // Start the server
-app.listen(process.env.PORT || 5000)
+//server.listen(5000)

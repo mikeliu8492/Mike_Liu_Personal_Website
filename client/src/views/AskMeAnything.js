@@ -4,6 +4,7 @@ import Axios from 'axios';
 import './AskMeAnything.css';
 import luis from '../images/common/luis.png'
 
+
 let HOST = ""
 if (process.env.NODE_ENV === 'production'){
     HOST = "https://mikeliu8492.herokuapp.com"
