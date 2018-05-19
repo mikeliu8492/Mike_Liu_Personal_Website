@@ -47,9 +47,10 @@ class AskMeAnything extends React.Component{
             this.setState({
                 value: ''
             })
+            event.preventDefault();
         })
 
-        event.preventDefault();
+        
         
     }
 
@@ -57,17 +58,17 @@ class AskMeAnything extends React.Component{
         return (<div>
             <h1>Ask Me Anything!</h1>
 
-            <p>This is a Microsoft LUIS Bot I trained to answer questions about me (within reason of course).  It mainly talks about
+            <p>This is a <a href="https://azure.microsoft.com/en-us/services/cognitive-services/language-understanding-intelligent-service/">Microsoft LUIS</a> Bot I trained to answer questions about me (within reason of course).  It mainly talks about
                 my recreational hobbies, favorite foods, and pop culture items I like, amongst others.
             </p>
 
-            <p>You can ask a question about me, and it will answer to its best ability. This is meant as a fun activity and NOT a means to sleuth in-depth information.
+            <p>You can ask a question about me, and it will answer to its best ability. This is meant as a fun activity and NOT a means to sleuth in-depth information about me.
                 Of course, you can always contact me by <a href="mailto:mikeliu8492@gmail.com">e-mail</a>.
             </p>
 
             <p> <em>Instructions:  </em> You can say "hello" (or some variant) to my bot and it will greet you.  Otherwise, ask it
-                questions specifically relate to categories of likes (e.g. what kind of music do you like).  It is not equipped to answer yes/no questions... yet.
-                Please enjoy!
+                questions specifically relate to categories of my personal preference (e.g. "What kind of music do you like?").  It 
+                is not equipped to answer yes/no questions... yet.  Please enjoy!
             </p>
             
             <div style={{width: "90%"}}>
@@ -84,12 +85,10 @@ class AskMeAnything extends React.Component{
 
                     </div>
                 </div>
-                <div style={{float: "right", width: "80%", padding: "0px 10px 10px 50px"}}>
-                    <div>
-                        <form>
-                            <textarea value={this.state.value} rows="10" cols="70" onChange={this.handleChange}>Enter text here...</textarea>
-                        </form>
-                    </div>
+                <div style={{float: "right", width: "80%", padding: "0px 10px 10px 50px", display: "flex"}}>
+                    <form>
+                        <textarea style={{boxSizing:"border-box", height: "100%"}} value={this.state.value} rows="10" cols="70" onChange={this.handleChange}>Enter text here...</textarea>
+                    </form>
                 </div>
  
             
