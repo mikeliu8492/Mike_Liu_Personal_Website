@@ -16,6 +16,9 @@ if (process.env.NODE_ENV !== 'production') {
 // Create our Express application
 const app = express();
 
+const secure = require('express-force-https');
+app.use(secure)
+
 
 const allowCrossDomain = (req, res, next) => {
     res.header("Access-Control-Allow-Origin", "http://mikeliu8492.herokuapp.com");
