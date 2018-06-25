@@ -40,6 +40,24 @@ class Header extends Component {
                                         <Link to="/musical" className = "nav-link" title="Musical Surpise">Musical Surprise</Link>
                                     </li>
                                 </ul>
+
+                                <ul class="form-inline my-2 my-lg-0">
+                                    <ul className="navbar-nav mr-auto">
+                                        <li className="nav-item active">
+                                            <a href="mailto:mikeliu8492@gmail.com" className = "nav-link" title="Email"><i className="fa fa-2x fa-envelope" alt="Email"></i></a>
+                                        </li>
+                                        <li className="nav-item active">
+                                            <a href="https://github.com/mikeliu8492" className = "nav-link" title="Github"><i className="fa fa-2x fa-github" alt="Github"></i></a>
+                                        </li>
+                                        <li className="nav-item active">
+                                            <a href="https://www.linkedin.com/in/mikeliu8492/" className = "nav-link" title="LinkedIn"><i className="fa fa-2x fa-linkedin" alt="LinkedIn"></i></a>
+                                        </li>
+                                        <li className="nav-item active">
+                                            <a href="https://www.facebook.com/mike.liu.129" className = "nav-link" title="Facebook"><i className="fa fa-2x fa-facebook" alt="Facebook"></i></a>
+                                        </li>
+                                    </ul>
+                                </ul>
+
                             </div>
                     </nav>
                 </header>
