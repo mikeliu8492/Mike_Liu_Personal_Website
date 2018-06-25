@@ -1,5 +1,6 @@
 footer {
     margin-top: 30px;
+    word-wrap: break-word;
 }
 
 #contacts-title {
@@ -8,7 +9,7 @@ footer {
     text-align: center;
 }
 
-#tachyons-title{
+#bootstrap-title{
     background-color: lightskyblue;
     margin: 0;
     text-align: center;

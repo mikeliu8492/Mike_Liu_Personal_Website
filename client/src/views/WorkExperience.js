@@ -9,19 +9,19 @@ const companyArray = [
 
 const CompanyElement = ({picture, name, alternateText, linkUrl}) => {
     return (
-        <div>
-            <div style={{float: "left", width: "20%"}}>
-                <Link to = {linkUrl}><img src={picture} alt={alternateText} style={{maxHeight: "100px"}}></img></Link>
+        <div className="row my-5">
+            <div className="col-2 align-self-center">
+                <Link to = {linkUrl}>
+                    <img src={picture} alt={alternateText} style={{maxHeight: "100px"}}></img>
+                </Link>
             </div>
-            <div style={{float: "right", alignItems: "center", width:"80%"}}>
-                <div style={{textAlign: "left", position: "relative", top: "30px", margin: "10px", verticalAlign: "center"}}>
-                <Link to = {linkUrl}> {name}</Link>
-                </div>
+            <div className="col-10 align-self-center">
+                <Link to = {linkUrl}> 
+                    <span className="text-dark"><b>{name}</b></span>
+                </Link>
             </div>
-
-            <br style={{clear:"both"}}/>
-            <div style={{minHeight: "30px"}}></div>
-        </div>)
+        </div>
+    )
 }
 
 const WorkExperience = () => {
@@ -29,21 +29,22 @@ const WorkExperience = () => {
         return <CompanyElement key={index} picture={company.picture} name={company.name} alternateText={company.alternateText} linkUrl={company.linkUrl}/>
     })
 
-    return (<div>
-        <h1>My Career Journey Thusfar</h1>
-        <br/>
-        <br/>
-        <h3>Internships and Full-time Opportunities Experienced</h3>
-        <br/>
-        
-        
-        <section style={{display: "block"}}>
-            <ul>
-                {companies}
-            </ul>
-        </section>
-
-    </div>)
+    return (
+        <div class="my-5">
+            <h1>My Career Journey Thusfar</h1>
+            <br/><br/>
+            <h3>Internships and Full-time Opportunities Experienced</h3>
+            <br/>
+            
+            
+            <section>
+                <ul>
+                    {companies}
+                </ul>
+            </section>
+            <br/>
+        </div>
+    )
 }
 
 export default WorkExperience;

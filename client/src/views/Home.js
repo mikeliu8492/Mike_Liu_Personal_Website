@@ -7,15 +7,27 @@ import './Home.css'
 class Home extends Component {
     render() {
         return (
+            
             <div>
-                <div className="flex items-center">
-                    <div id = "portrait" className = "w-45">
-                        <img src={interview} alt="my portrait"></img>
-                    </div>
+                <div>
+                    <h1 id = "main-headline"> Hello World!  My Name is Mike Liu</h1>
+                </div>
 
-                    <div id = "quote" className = "w-55">
+                <div className="row flex items-center">
+                    <div id = "portrait" className="col-5">
+                        <div>
+                            <img src={interview} alt="my portrait"></img>
+                        </div>
+                    </div>
+                    <div id = "quote"className="col-7">
                         <blockquote>
-                            <p><i><b>“You can't always get what you want, but if you try sometimes, you might find, you get what you need.”</b></i></p>
+                            <p>
+                                <a href="https://www.youtube.com/watch?v=oqMl5CRoFdk">
+                                    <span className="text-dark font-weight-bold">
+                                        “You can't always get what you want, but if you try sometimes, you might find, you get what you need.”
+                                    </span>
+                                </a>
+                            </p>
                             <p>― Mick Jagger</p>
                         </blockquote>
                     </div>
@@ -25,8 +37,8 @@ class Home extends Component {
                     <h3> About Me </h3>
                     <p>
                         HI! My name is Mike Liu. <br/><br/>
-                        I'm a graduate of the <a href="http://www.cs.uiuc.edu" target="_blank" rel="noopener noreferrer"> <b>Department of Computer Science</b> </a> at the
-                        <a href="http://engineering.illinois.edu/" target="_blank" rel="noopener noreferrer"> <b>University of Illinois, Urbana-Champaign College of Engineering</b></a>. I was born in Nanchang, China, but grew up in Los Angeles for most of my life. I came to Computer Science through a very roundabout way. When I was younger, I always
+                        I'm a graduate of the <a href="http://www.cs.uiuc.edu" target="_blank" rel="noopener noreferrer"><span className="link-in-body font-weight-bold">Department of Computer Science</span></a> at the
+                        <a href="http://engineering.illinois.edu/" target="_blank" rel="noopener noreferrer"> <span className="link-in-body font-weight-bold">University of Illinois, Urbana-Champaign College of Engineering</span></a>. I was born in Nanchang, China, but grew up in Los Angeles for most of my life. I came to Computer Science through a very roundabout way. When I was younger, I always
                         liked to play video games and solve puzzles (and I still remember the day my dad took my Legos away because I was too old for them). Unlike people such as my cousin James, I wasn't really into robotics or dissecting a computer to see how it works.
                         In fact, prior to reorienting into CS I wanted to be a doctor and actually went to medical school for almost 3 years. In the end, I chose to leave because I couldn't stand the blood and the stress. Plus there was no such thing as version control
                         in medicine so that wasn't the field for me. But now I approach the field of Comptuer Science with positivity because I see how it suits my need to find patterns and meaning in solving problems. This comes from my musically inclined nature (I have
@@ -52,18 +64,39 @@ class Home extends Component {
                 <section>
                 <h3> Some of My Favorite Music </h3>
                     <ul>
-                        <li><a href="https://www.pandora.com/music/classical/classical-for-studying" target="_blank" rel="noopener noreferrer">Pandora Classical for Studying</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=AgOsUsQd2eg&index=1&list=PLCVM8OjVikTbbWIyHco3mG3L_wiMfE327" target="_blank" rel="noopener noreferrer">Dallas String Quartet</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=4qOGVj_s3Bo&list=PLYb55hR6Ug7f2VbTdyUE8lrX_n_BaX52F&index=1" target="_blank" rel="noopener noreferrer">Emile Pandolfi</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=PiBBgCtfPyI" target="_blank" rel="noopener noreferrer">Brain Crain</a></li>
-                        <li><a href="https://www.youtube.com/watch?v=NN-Jfqg5Zd8&index=1&list=PLwu-smR1Fpb1tEM5hRgakp1GDOLeMSMoV" target="_blank" rel="noopener noreferrer">Philip Wesley</a></li>
+                        <li>
+                            <a href="https://www.pandora.com/music/classical/classical-for-studying" target="_blank" rel="noopener noreferrer">
+                                <span className="link-in-body font-weight-bold">Pandora Classical for Studying</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=AgOsUsQd2eg&index=1&list=PLCVM8OjVikTbbWIyHco3mG3L_wiMfE327" target="_blank" rel="noopener noreferrer">
+                                <span className="link-in-body font-weight-bold">Dallas String Quartet</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=4qOGVj_s3Bo&list=PLYb55hR6Ug7f2VbTdyUE8lrX_n_BaX52F&index=1" target="_blank" rel="noopener noreferrer">
+                                <span className="link-in-body font-weight-bold">Emile Pandolfi</span>
+                            </a>
+                            </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=PiBBgCtfPyI" target="_blank" rel="noopener noreferrer">
+                                <span className="link-in-body font-weight-bold">Brain Crain</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=NN-Jfqg5Zd8&index=1&list=PLwu-smR1Fpb1tEM5hRgakp1GDOLeMSMoV" target="_blank" rel="noopener noreferrer">
+                                <span className="link-in-body font-weight-bold">Philip Wesley</span>
+                            </a>
+                        </li>
                     </ul>
                 </section>
 
                 <h3>Food Pictures!</h3>
                 <p>
-                    <Link to="/food">An artistic slideshow of good food pictures I have taken.</Link>
+                    <Link to="/food"><span className="link-in-body font-weight-bold">An artistic slideshow of good food pictures I have taken.</span></Link>
                 </p>
+                <br/>
             </div>
         )
     }

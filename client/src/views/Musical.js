@@ -34,7 +34,9 @@ class Musical extends Component {
     }
 
     render() {
-        return (<div>
+        return (
+        
+        <div class="mt-5">
             <h1>This is a pleasant musical surprise.  Enjoy the nature pictures.</h1>
             
             <br/>
@@ -49,10 +51,10 @@ class Musical extends Component {
                 <audio src="https://drive.google.com/uc?id=1ZRI5U9wOFssHnz6-IYjKz23BxpT7ho1N" controls={true} controlsList="nodownload"></audio>
             </div>
 
-            <section>
+            <div>
                 <h3>Your Nice Surprise</h3>
-                <p>A pretty song called "Lavender Hills" by <b><a href="https://www.amazon.com/Lavender-Hills/dp/B0013PDGWU" target="_blank" rel="noopener noreferrer">Brian Crain</a></b> to pretty pictures of nature. Just click the <b>PLAY</b> button to enjoy with slideshow.</p>
-            </section>
+                <p>A pretty song called "Lavender Hills" by <b><a href="https://www.amazon.com/Lavender-Hills/dp/B0013PDGWU" target="_blank" rel="noopener noreferrer"><span className="font-weight-bold link-in-body">Brian Crain</span></a></b> to pretty pictures of nature. Just click the <b>PLAY</b> button to enjoy with slideshow.</p>
+            </div>
             <br/>
         </div>)
     }

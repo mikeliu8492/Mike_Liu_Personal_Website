@@ -6,6 +6,11 @@ import registerServiceWorker from './registerServiceWorker';
 import Favicon from 'react-favicon';
 import reactIcon from './images/common/favicon.ico'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'jquery';
+import 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 ReactDOM.render(
     <div>
         <Favicon url={reactIcon} />

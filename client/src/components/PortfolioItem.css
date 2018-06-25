@@ -1,13 +1,18 @@
 .project-picture {
-    max-width: 500px;
-    min-height: 300px;
-    max-height: 400px;
+    max-width: 400px;
+    min-height: 100px;
+    max-height: 320px;
     padding: 20px;
-    float: left;
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap;
 }
 
 
 .project_description {
-    float: right;
     align-items: center;
+}
+
+.portfolio-row {
+    min-height: 300px;
 }

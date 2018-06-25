@@ -1,21 +1,8 @@
-#main-headline {
-    background-color: navy;
-    margin: 0;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
 section {
     min-height: 30vh;
 }
 
-.main {
-    width: 90%;
-    margin: 0 auto;
-}
-
-body {
+.App {
     background-color: lightsteelblue;
 }
 
