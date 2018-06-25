@@ -13,7 +13,7 @@ class Header extends Component {
             <div>
                 <header className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: "black"}}>
                     <nav className="container">
-                            <a className="navbar-brand ml-3" title="Home" href="https://cs.illinois.edu/">
+                            <a className="navbar-brand ml-3" title="UIUC Alma Mater" href="https://cs.illinois.edu/">
                                 <img style={{maxHeight: "40px"}} src={illini} alt="Hello World My Name is Mike!"></img>
                             </a>
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
