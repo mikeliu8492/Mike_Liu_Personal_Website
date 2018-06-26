@@ -29,14 +29,14 @@ class Imo extends Component{
     render() {
         return (
         
-        <div class="my-5">
+        <div className="my-5">
             <h1>A Summer in UIUC's Research Park</h1>
             <br/>
-            <div class="my-3">
+            <div className="my-3">
                 <Slideshow images={this.state.images}/>
             </div>
 
-            <section class="my-5">
+            <section className="my-5">
                 <h4>The Summer I Learned SQL Well</h4>
                 <br/>
                 <p>This was such an educational and fun summer, where I underwent a hybridized role in Health Information Management(HIM) and SQL development for QA. The company is called Intelligent Medical Objects(IMO), and they are essentially the "Intel Inside"

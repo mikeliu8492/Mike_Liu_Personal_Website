@@ -36,7 +36,7 @@ class Musical extends Component {
     render() {
         return (
         
-        <div class="mt-5">
+        <div className="mt-5">
             <h1>This is a pleasant musical surprise.  Enjoy the nature pictures.</h1>
             
             <br/>

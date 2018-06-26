@@ -11,9 +11,9 @@ const Redirect = () => {
             </div>
             <br/>
             <br/>
-            <p>This is not the page you are looking for (i.e. the resource does not exist)</p>
+            <p>This is not the page you are looking for (i.e. the resource does not exist).</p>
             <Link to="/home">
-                <span class="link-in-body font-weight-bold"> <i class="fa fa-angle-double-left"></i>  Home </span>
+                <span className="link-in-body font-weight-bold"> <i className="fa fa-angle-double-left"></i>  Home </span>
             </Link>
         </div>
     )

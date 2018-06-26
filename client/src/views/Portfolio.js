@@ -33,7 +33,7 @@ const Portfolio = () => {
     })
 
     return(
-        <div class="mt-5">
+        <div className="mt-5">
             <h1>Some Project Samples</h1>
             <br/>
             {portfolioComponents}

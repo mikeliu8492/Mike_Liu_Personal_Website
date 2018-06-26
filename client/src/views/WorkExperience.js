@@ -30,7 +30,7 @@ const WorkExperience = () => {
     })
 
     return (
-        <div class="my-5">
+        <div className="my-5">
             <h1>My Career Journey Thusfar</h1>
             <br/><br/>
             <h3>Internships and Full-time Opportunities Experienced</h3>
