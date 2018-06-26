@@ -42,9 +42,9 @@ class Home extends Component {
                         liked to play video games and solve puzzles (and I still remember the day my dad took my Legos away because I was too old for them). Unlike people such as my cousin James, I wasn't really into robotics or dissecting a computer to see how it works.
                         In fact, prior to reorienting into CS I wanted to be a doctor and actually went to medical school for almost 3 years. In the end, I chose to leave because I couldn't stand the blood and the stress. Plus there was no such thing as version control
                         in medicine so that wasn't the field for me. But now I approach the field of Computer Science with positivity because I see how it suits my need to find patterns and meaning in solving problems. This comes from my musically inclined nature (I have
-                        played piano for years), and I am glad I have found an outlet for a viable career. While I am open to learning many new technologies, I am particuarly interested in databases, data schema modeling, and backend API services. I have
-                        demonstrated results and growth in these areas from the internships I have experienced, especially now that I have developed proficiency in technological tools such SQL and C# amongst many others. In my senior year, I have also added Node.js, Express, React, and
-                        MongoDB to my repetoire. Therefore, I hope to advance even further along this path of lifelong learning.
+                        played piano for years), and I am glad I have found an outlet for a viable career. When I started I thought the web tech stack was insurmountable.  Now I can't live without it. I am particuarly interested in databases, data schema modeling, and backend API services. I have
+                        demonstrated results and growth in these areas from the internships I have experienced, especially now that I have developed proficiency in many languages such SQL, Javascript and C#. In my senior year, I have also added other frameworks and tools such as Node.js, Express, React, 
+                        Bootstrap, and MongoDB to my repertoire. Therefore, I hope to advance even further along this path of lifelong learning.
                     </p>
                 </article>
                 
