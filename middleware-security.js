@@ -89,6 +89,7 @@ const middlewareSecurityFunction = (req, res, next) => {
             })
             .then(uid => {
                 console.log("MY UID " + uid)
+                console.log("COMPARE UID " + process.env.FIREBASE_CLIENT_UID)
                 if (uid === process.env.FIREBASE_CLIENT_UID) {
                     return next()
                 }
