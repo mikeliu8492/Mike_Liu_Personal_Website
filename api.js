@@ -1,12 +1,20 @@
 const Fact = require('./models/fact')
 const Gallery = require('./models/gallery')
-const axios = require('axios');
+const axios = require('axios')
+const middleware = require('./middleware-security')
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').load();
 }
 
 module.exports = (app, router) => {
+
+    router.use((req, res, next) => {
+        console.log("ENTERED MIDDLEWARE!")
+        console.log('Request URL:', req.originalUrl)
+        console.log('Request Type:', req.method)
+        middleware.middlewareSecurityFunction(req, res, next)
+    })
 
     // Home page route.
     router.get('/fact', (req, res) => {
@@ -107,7 +115,7 @@ module.exports = (app, router) => {
         let encodedQuestion = req.body.question
 
         if(!encodedQuestion || encodedQuestion.length === 0){
-            res.status(200).json({message: "You have to actually type something to get an answer."})
+            return res.status(200).json({message: "You have to actually type something to get an answer."})
         }
 
         let callToLUIS = `${process.env.LUIS_STRING}${encodedQuestion}`;
