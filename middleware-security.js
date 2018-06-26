@@ -36,18 +36,21 @@ const extractBearerToken = (req, res) => {
     return new Promise((resolve, reject) => {
         try{
             if(req.headers.authorization === undefined || req.headers.authorization === null){
+                console.log("NO TOKEN SENT")
                 reject({status: 401, error: true, message:  "You didn't send a token.  Access denied"})
             }
     
             tokenProps = req.headers.authorization.split(" ");
             
             if(tokenProps.length < 2 || tokenProps[0] !== "Bearer"){
+                console.log("TOKEN PAYLOAD ERROR")
                 reject({status: 401, error: true, message:  "Invalid token payload format"})
             }
 
             resolve(tokenProps[1])
         }
         catch(err){
+            console.log("Something else in extracting bearer token")
             reject({status: 400, error: true, message:  err.toString()})
         }
     })
@@ -60,6 +63,7 @@ const verifyToken = (token) => {
     return new Promise((resolve, reject) => {
 
         if (token === undefined || token === null) {
+            console.log("TOKEN PAYLOAD ERROR IN VERIFY TOKEN")
             reject({status: 401, error: true, message:  "Incorrect payload.  Access denied"})
         }
 
@@ -89,6 +93,7 @@ const middlewareSecurityFunction = (req, res, next) => {
                     return next()
                 }
                 else {
+                    console.log("TOKEN NO MATCH LOGGED IN CLIENT")
                     return res.json(401).status({error: true, message: "Token does not match loggedin client.  Access denied!"})
                 }
             })
