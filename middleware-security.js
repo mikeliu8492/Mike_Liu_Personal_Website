@@ -92,10 +92,10 @@ const middlewareSecurityFunction = (req, res, next) => {
                     return res.json(401).status({error: true, message: "Token does not match loggedin client.  Access denied!"})
                 }
             })
-            .catch(errObject => {
+            .catch(err => {
                 console.log("ERROR IN RETURN FUNCTION")
                 console.log(err.toString())
-                return res.status(500).json({error: true, message: errObject.toString()})
+                return res.status(500).json({error: true, message: err.toString()})
             })
         }
         else {
