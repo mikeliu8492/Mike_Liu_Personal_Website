@@ -4,6 +4,9 @@ import Axios from 'axios';
 import './AskMeAnything.css';
 import luis from '../images/common/luis.png'
 
+//import firebase from 'firebase/app';
+//import 'firebase/auth';
+
 
 let HOST = ""
 if (process.env.NODE_ENV === 'production'){
@@ -22,8 +25,7 @@ class AskMeAnything extends React.Component{
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-      }
-
+    }
     
     handleChange(event) {
         this.setState({value: event.target.value});

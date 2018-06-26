@@ -17,12 +17,38 @@ import Imo from './views/Imo'
 import Redirect from './views/Redirect'
 import Header from './components/Header'
 
-
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 class App extends Component {
 
   componentWillMount() {
-    console.log(`SECRET IS ${process.env.REACT_APP_TEST_VAR}`)
+
+      const config = {
+        apiKey: process.env.REACT_APP_API_KEY,
+        authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+        databaseURL: process.env.REACT_APP_DB_URL,
+        projectId: process.env.REACT_APP_PROJECT_ID,
+        storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+        messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID
+      };
+
+      firebase.initializeApp(config);
+
+      console.log(`SECRET IS ${process.env.REACT_APP_TEST_VAR}`)
+      
+      const {currentUser} = firebase.auth()
+
+      if(currentUser === null) {
+        firebase.auth().signInWithEmailAndPassword(process.env.REACT_APP_USERNAME, process.env.REACT_APP_PASSWORD)
+        .then(result => {
+          const signedEmail = firebase.auth().currentUser.email
+          console.log(`My signed email is:  ${signedEmail}`)
+        })
+        .catch(err => {
+          console.log(err.toString())
+        })
+      }
   }
   render() {
     return (
