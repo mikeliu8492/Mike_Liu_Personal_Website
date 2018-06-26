@@ -4,8 +4,8 @@ import Axios from 'axios';
 import './AskMeAnything.css';
 import luis from '../images/common/luis.png'
 
-//import firebase from 'firebase/app';
-//import 'firebase/auth';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 
 let HOST = ""
@@ -32,9 +32,16 @@ class AskMeAnything extends React.Component{
     }
     
     handleSubmit(event) {
-        let payload = encodeURI(this.state.value)
+        const payload = encodeURI(this.state.value)
 
-        Axios.post(`${HOST}/api/luis`, {question: payload})
+        firebase.auth().currentUser.getIdToken(false)
+        .then(token => {
+            const config = {
+                headers: {'Authorization': `Bearer ${token}`}
+            };
+
+            return Axios.post(`${HOST}/api/luis`, {question: payload}, config)
+        })
         .then (response => {
             this.setState({
                 answer: response.data.message
@@ -44,6 +51,7 @@ class AskMeAnything extends React.Component{
             this.setState({
                 answer: `Something went wrong; please try again later.`
             })
+            console.log(err.toString())
         })
         .finally(() =>{
             this.setState({
