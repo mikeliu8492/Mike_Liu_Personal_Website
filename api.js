@@ -8,14 +8,14 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = (app, router) => {
-    /*
+    
     router.use((req, res, next) => {
         console.log("ENTERED MIDDLEWARE!")
         console.log('Request URL:', req.originalUrl)
         console.log('Request Type:', req.method)
         middleware.middlewareSecurityFunction(req, res, next)
     })
-    */
+    
 
     // Home page route.
     router.get('/fact', (req, res) => {

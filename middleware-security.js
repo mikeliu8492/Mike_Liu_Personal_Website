@@ -69,7 +69,8 @@ const verifyToken = (token) => {
             resolve(uid)
         })
         .catch(err => {
-            console.log(err)
+            console.log("ERROR IN VERIFY FUNCTION")
+            console.log(err.toString())
             reject({status: 500, error:true, message: err.toString()})
         })
     })
@@ -92,6 +93,7 @@ const middlewareSecurityFunction = (req, res, next) => {
                 }
             })
             .catch(errObject => {
+                console.log("ERROR IN RETURN FUNCTION")
                 console.log(err.toString())
                 return res.status(500).json({error: true, message: errObject.toString()})
             })
@@ -104,6 +106,5 @@ const middlewareSecurityFunction = (req, res, next) => {
 
 
 module.exports = {
-    //verifyUserByToken: verifyUserByToken,
     middlewareSecurityFunction: middlewareSecurityFunction
 };
