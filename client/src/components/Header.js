@@ -27,10 +27,6 @@ class Header extends Component {
                                     <li className="nav-item active">
                                         <a className="nav-link" href={google_url} title="Resume">Resume</a>   
                                     </li>
-                                    
-                                    <li className="nav-item active">
-                                        <Link to="/work" className = "nav-link" title="Work Experience">Work Experience</Link>
-                                    </li>
 
                                     <li class="nav-item active dropdown">
                                         <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
