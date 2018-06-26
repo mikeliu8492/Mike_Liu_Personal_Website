@@ -49,7 +49,6 @@ const verifyToken = (token) => {
     return new Promise((resolve, reject) => {
 
         if (token === undefined || token === null) {
-            console.log("TOKEN PAYLOAD ERROR IN VERIFY TOKEN")
             reject({status: 401, error: true, message:  "Incorrect payload.  Access denied"})
         }
 
@@ -59,8 +58,6 @@ const verifyToken = (token) => {
             resolve(uid)
         })
         .catch(err => {
-            console.log("ERROR IN VERIFY FUNCTION")
-            console.log(err.toString())
             reject({status: 500, error:true, message: err.toString()})
         })
     })
@@ -77,7 +74,7 @@ const middlewareSecurityFunction = (req, res, next) => {
                     return next()
                 }
                 else {
-                    return res.json(401).status({error: true, message: "Token does not match loggedin client.  Access denied!"})
+                    return res.json(401).status({error: true, message: "Token does not match client.  Access denied!"})
                 }
             })
             .catch(err => {

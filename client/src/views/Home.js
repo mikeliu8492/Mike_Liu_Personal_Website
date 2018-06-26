@@ -22,7 +22,7 @@ class Home extends Component {
                     <div id = "quote"className="col-7">
                         <blockquote>
                             <p>
-                                <a href="https://www.youtube.com/watch?v=oqMl5CRoFdk">
+                                <a href="https://www.youtube.com/watch?v=oqMl5CRoFdk" target="_blank" rel="noopener noreferrer">
                                     <span className="text-dark font-weight-bold">
                                         “You can't always get what you want, but if you try sometimes, you might find, you get what you need.”
                                     </span>
