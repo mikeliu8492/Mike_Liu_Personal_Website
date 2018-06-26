@@ -36,10 +36,6 @@ class AskMeAnything extends React.Component{
 
         firebase.auth().currentUser.getIdToken(false)
         .then(token => {
-            const config = {
-                headers: {'Authorization': `Bearer ${token}`}
-            };
-
             return Axios.post(`${HOST}/api/luis`, {question: payload}, {headers: {'Authorization': 'Bearer ' + token}})
         })
         .then (response => {

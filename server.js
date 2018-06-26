@@ -57,8 +57,8 @@ const api = require('./api.js');
 app.use('/api', api(app, router));
 
 // Serve up the front-end static JS Bundle contents in production environment
-if(process.env.NODE_ENV !== "production"){
-    //app.use(secure)
+if(process.env.NODE_ENV === "production"){
+    app.use(secure)
     app.use(express.static('client/build'));
 
     app.get('/*', (req, res) => {
