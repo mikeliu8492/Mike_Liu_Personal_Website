@@ -88,18 +88,15 @@ const middlewareSecurityFunction = (req, res, next) => {
                 return verifyToken(token)
             })
             .then(uid => {
-                if (uid !== process.env.FIREBASE_CLIENT_UID) {
-                    console.log("access approved")
+                console.log("MY UID " + uid)
+                if (uid === process.env.FIREBASE_CLIENT_UID) {
                     return next()
                 }
                 else {
-                    console.log("TOKEN NO MATCH LOGGED IN CLIENT")
                     return res.json(401).status({error: true, message: "Token does not match loggedin client.  Access denied!"})
                 }
             })
             .catch(err => {
-                console.log("ERROR IN RETURN FUNCTION")
-                console.log(err.toString())
                 return res.status(500).json({error: true, message: err.toString()})
             })
         }
