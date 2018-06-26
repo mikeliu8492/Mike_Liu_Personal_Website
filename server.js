@@ -5,9 +5,7 @@ const express = require('express'),
     path = require('path'),
     bluebird = require('bluebird'),
     bodyParser = require('body-parser'),
-    favicon = require('serve-favicon'),
-    https = require('https'),
-    fs = require('fs');
+    favicon = require('serve-favicon')
 
 mongoose.Promise = bluebird
 
@@ -17,9 +15,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 // Create our Express application
 const app = express();
-
 const secure = require('express-force-https');
-app.use(secure)
+
 
 let HOST = ""
 if (process.env.NODE_ENV === 'production'){
@@ -49,12 +46,14 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")))
 
-// Use api routes as a module as a module (see api.js)
+// Equip the API With Middleware
 const api = require('./api.js');
+
 app.use('/api', api(app, router));
 
 // Serve up the front-end static JS Bundle contents in production environment
 if(process.env.NODE_ENV === "production"){
+    app.use(secure)
     app.use(express.static('client/build'));
 
     app.get('/*', (req, res) => {
