@@ -76,24 +76,27 @@ const verifyToken = (token) => {
 }
 
 const middlewareSecurityFunction = (req, res, next) => {
-        if(process.env.NODE_ENV !== 'production') {
-            console.log("Middlware functionality occcured in NON-PRODUCTION")
+        if(process.env.NODE_ENV === 'production') {
+            console.log("Middlware functionality occcured in PRODUCTION")
             extractBearerToken(req, res)
             .then(token => {
                 return verifyToken(token)
             })
-            .then(result => {
-                console.log(result)
-                return next()
+            .then(uid => {
+                if (uid !== process.env.FIREBASE_CLIENT_UID) {
+                    console.log("access approved")
+                    return next()
+                }
+                else {
+                    return res.json(401).status({error: true, message: "Token does not match loggedin client.  Access denied!"})
+                }
             })
             .catch(errObject => {
-                console.log(errObject)
-                return res.status(500).json({error: errObject.error, message: "My message"})
+                return res.status(500).json({error: true, message: errObject.toString()})
             })
-            
         }
         else {
-            console.log("Middlware functionality occcured in PRODUCTION")
+            console.log("Middlware functionality occcured in NON-PRODUCTION")
             return next()
         }  
 }
