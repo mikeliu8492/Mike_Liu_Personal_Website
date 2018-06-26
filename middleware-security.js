@@ -92,6 +92,7 @@ const middlewareSecurityFunction = (req, res, next) => {
                 }
             })
             .catch(errObject => {
+                console.log(err.toString())
                 return res.status(500).json({error: true, message: errObject.toString()})
             })
         }
