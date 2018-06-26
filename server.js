@@ -70,15 +70,4 @@ else{
     console.log("NOT PRODUCTION!")
 }
 
-/*
-let httpsOptions = {
-    key: fs.readFileSync('mike-key.pem'),  
-    cert: fs.readFileSync('mike-cert.pem') 
-}*/
-
-
 app.listen(process.env.PORT || 5000 )
-
-//const server = https.createServer(httpsOptions, app)
-// Start the server
-//server.listen(5000)
