@@ -40,7 +40,7 @@ class AskMeAnything extends React.Component{
                 headers: {'Authorization': `Bearer ${token}`}
             };
 
-            return Axios.post(`${HOST}/api/luis`, {question: payload}, config)
+            return Axios.post(`${HOST}/api/luis`, {question: payload}, {headers: {'Authorization': 'Bearer ' + token}})
         })
         .then (response => {
             this.setState({
