@@ -39,9 +39,7 @@ class App extends Component {
 
       if(currentUser === null) {
         firebase.auth().signInWithEmailAndPassword(process.env.REACT_APP_USERNAME, process.env.REACT_APP_PASSWORD)
-        .then(result => {
-          const signedEmail = firebase.auth().currentUser.email
-        })
+        .then(result => {})
         .catch(err => {
           console.log(err.toString())
         })
