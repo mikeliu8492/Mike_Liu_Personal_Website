@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'production'){
     HOST = "https://mikeliu8492.herokuapp.com"
 }
 else {
-    HOST = "https://wwww.localhost:5000"
+    HOST = "http://localhost:5000"
 }
 
 class AskMeAnything extends React.Component{
