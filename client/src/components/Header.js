@@ -41,7 +41,7 @@ class Header extends Component {
                                     </li>
                                 </ul>
 
-                                <ul class="form-inline my-2 my-lg-0">
+                                <ul className="form-inline my-2 my-lg-0">
                                     <ul className="navbar-nav mr-auto">
                                         <li className="nav-item active">
                                             <a href="mailto:mikeliu8492@gmail.com" className = "nav-link" title="Email"><i className="fa fa-2x fa-envelope" alt="Email"></i></a>

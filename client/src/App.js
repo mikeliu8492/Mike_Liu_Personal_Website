@@ -18,7 +18,12 @@ import Redirect from './views/Redirect'
 import Header from './components/Header'
 
 
+
 class App extends Component {
+
+  componentWillMount() {
+    console.log(`SECRET IS ${process.env.REACT_APP_TEST_VAR}`)
+  }
   render() {
     return (
       <div className="App">
