@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <footer>
             <div className="row" style={{minHeight: "400px"}}>
-                <div id="contacts-title" className="col-4 pt-5" >
+                <div id="contacts-title" className="col-sm-4 pt-5" >
                     <h4>Contact Information</h4>
                     <br/>
                     <p className="mb-4"><a href="mailto:mikeliu8492@gmail.com"><span className="text-dark"><b>mikeliu8492@gmail.com</b></span></a></p>
@@ -26,11 +26,11 @@ const Footer = () => {
                         <li className="contact-icon"><a href="https://github.com/mikeliu8492"><img src={github} className="icon" alt="github repo"></img></a></li>
                     </ul>
                 </div>
-                <div id="bootstrap-title" className="col-4 pt-5">
+                <div id="bootstrap-title" className="col-sm-4 pt-5">
                     <h4 className="mb-4">Made With Bootstrap</h4>
                     <a href="https://getbootstrap.com/"><img id="bootstrap-image" src={bootstrapImage} alt="Made with Bootstrap"></img></a>
                 </div>
-                <div id="mern-title" className="col-4 pt-5">
+                <div id="mern-title" className="col-sm-4 pt-5">
                     <h4 className="mb-4">Powered by MERN</h4>
                     <a href="https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/"><img src={mern} alt="Powered by Mern"></img></a>
                 </div>

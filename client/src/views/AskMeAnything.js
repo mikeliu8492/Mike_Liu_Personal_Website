@@ -83,24 +83,27 @@ class AskMeAnything extends React.Component{
             
             <div style={{width: "90%"}}>
                 
-                <div align="center" className="my-4">
-                    <h2>
-                        Question Time!
-                    </h2>
+                <div className="my-4">
+                    <div align="center">
+                        <h2>
+                            Question Time!
+                        </h2>
+                    </div>
+
                 </div>
                 <br/>
 
 
                 <div className="row">
-                    <div className="col-3-md m-5" align="center">
+                    <div className="col-md-4 p-3" align="center">
                         <img src={luis} alt="LUIS"></img>
                         <div align="center" className="mt-3">                                                    
                             <input id="luis-submit-button" className="btn btn-dark" type="submit" value="Ask Me A Question!" onClick={this.handleSubmit} style={{display: "block"}}/>
                         </div>
                     </div>
-                    <div className="col-9-md m-5">
+                    <div className="col-md-8 py-2 px-5">
                         <form>
-                            <textarea placeholder="Enter your question here..." value={this.state.value} rows="10" cols="70" onChange={this.handleChange}></textarea>
+                            <textarea placeholder="Enter your question here..." value={this.state.value} rows="5" style={{width:"100%", verticalAlign:"center"}} onChange={this.handleChange}></textarea>
                         </form>
                     </div>
                 </div>            

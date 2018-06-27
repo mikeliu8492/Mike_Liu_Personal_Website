@@ -28,14 +28,14 @@ class Header extends Component {
                                         <a className="nav-link" href={google_url} title="Resume">Resume</a>   
                                     </li>
 
-                                    <li class="nav-item active dropdown">
-                                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <li className="nav-item active dropdown">
+                                        <a className="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Work Experience
                                         </a>
                                         
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <Link to="/work" className = "dropdown-item" title="Complete Journey">Complete Journey</Link>
-                                            <div class="dropdown-divider" style={{borderColor: "black"}}></div>
+                                            <div className="dropdown-divider" style={{borderColor: "black"}}></div>
                                             <Link to="/microsoft" className = "dropdown-item" title="Microsoft">Microsoft</Link>
                                             <Link to="/imo" className = "dropdown-item" title="Intelligent Medical Objects">IMO</Link>
                                         </div>
