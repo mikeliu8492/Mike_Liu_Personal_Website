@@ -6,7 +6,7 @@ import axios from 'axios'
 import firebase from 'firebase'
 
 let HOST = ""
-if (process.env.NODE_ENV !== 'production'){
+if (process.env.NODE_ENV === 'production'){
     HOST = "https://mikeliu8492.herokuapp.com"
 }
 else {
