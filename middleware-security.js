@@ -17,16 +17,17 @@ admin.initializeApp({
     databaseURL: process.env.FIREBASE_DB_URL
 });
 
-const extractBearerToken = (req, res) => {
+const extractBearerToken = (headers) => {
     let tokenProps = null
     return new Promise((resolve, reject) => {
         try{
-            if(req.headers.authorization === undefined || req.headers.authorization === null){
+            console.log(headers)
+            if(headers.authorization === undefined || headers.authorization === null){
                 console.log("NO TOKEN SENT")
                 reject({status: 401, error: true, message:  "You didn't send a token.  Access denied"})
             }
     
-            tokenProps = req.headers.authorization.split(" ");
+            tokenProps = headers.authorization.split(" ");
             
             if(tokenProps.length < 2 || tokenProps[0] !== "Bearer"){
                 console.log("TOKEN PAYLOAD ERROR")
@@ -37,6 +38,7 @@ const extractBearerToken = (req, res) => {
         }
         catch(err){
             console.log("Something else in extracting bearer token")
+            console.log(err.toString())
             reject({status: 400, error: true, message:  err.toString()})
         }
     })
@@ -64,8 +66,9 @@ const verifyToken = (token) => {
 }
 
 const middlewareSecurityFunction = (req, res, next) => {
+    console.log(req.headers.authorization)
         if(process.env.NODE_ENV === 'production') {
-            extractBearerToken(req, res)
+            extractBearerToken(req.headers)
             .then(token => {
                 return verifyToken(token)
             })
@@ -80,10 +83,12 @@ const middlewareSecurityFunction = (req, res, next) => {
             .catch(err => {
                 return res.status(500).json({error: true, message: err.toString()})
             })
+            
         }
         else {
             return next()
-        }  
+        }
+        
 }
 
 
