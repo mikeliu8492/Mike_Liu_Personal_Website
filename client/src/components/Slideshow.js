@@ -1,58 +1,99 @@
 import React, {Component} from 'react';
-import { Slide } from 'react-slideshow-image';
-//import Axios from 'axios';
-
 import './Slideshow.css'
+
+import axios from 'axios'
+
+import firebase from 'firebase'
+
+let HOST = ""
+if (process.env.NODE_ENV !== 'production'){
+    HOST = "https://mikeliu8492.herokuapp.com"
+}
+else {
+    HOST = "http://localhost:5000"
+}
 
 class Slideshow extends Component
 {
     constructor(props) {
         super(props)
-        let {images} = props
         this.state = {
-            imageList: images
+            imageList: []
+        }
+    }
+    
+    async componentWillMount() {
+
+        const {currentUser} = firebase.auth()
+        try {
+            if(currentUser === null) {
+                await firebase.auth().signInWithEmailAndPassword(process.env.REACT_APP_USERNAME, process.env.REACT_APP_PASSWORD)
+            }
+            const token = firebase.auth().currentUser.getIdToken(false)
+            const {imageUrl} = this.props
+            const response = await axios.get(`${HOST}/api/gallery/${imageUrl}`, {headers: { Authorization: `Bearer ${token}`}})
+            const gallery = response.data.picture_urls
+            this.setState({imageList: gallery})
+
+        }
+        catch(err) {
+            console.log(err.toString())
         }
     }
 
-    /*
-    componentDidMount(){
-        Axios.get(this.state.imageEndpoint)
-        .then(gallery => {
-            console.log(gallery.data.picture_urls)
-            this.setState({
-                imageList: gallery.data.picture_urls
-            })
-        })
-    }*/
-    
+    renderSlides() {
+        return(
+            <div className="carousel-inner">
+                {
+                    this.state.imageList.map((galleryMember, index) => {
+                        if(index === 0) {
+                            return(
+                                <div key={galleryMember.image} className="carousel-item active">
+                                    <img className="d-block w-100" src={galleryMember.image} alt={galleryMember.alt_text}></img>
+                                </div>
+                            )
+                        }
+                        return(
+                            <div key={galleryMember.image} className="carousel-item">
+                                <img className="d-block w-100" src={galleryMember.image} alt={galleryMember.alt_text}></img>
+                            </div>
+                        )
 
-    render() {
-        return (
-            <div className="slideshow-container" style={{margin: "auto"}}>
-                <Slide
-                    images={this.state.imageList}
-                    duration={3000}
-                    transitionDuration={1000}
-                />
+                    })
+                }
             </div>
         )
     }
 
-}
+    renderCarousel() {
+        if (this.state.imageList.length === 0) {
+            return (<h4>Slideshow unavailable.</h4>) 
+        }
 
-/*
-const Slideshow = ({images, endpoint}) => {
-    console.log(images, endpoint)
-    return (
-        <div className="slideshow-container" style={{margin: "auto"}}>
-            <Slide
-                images={images}
-                duration={3000}
-                transitionDuration={1000}
-            />
+        return(
+        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel" data-interval="3000">
+            {   
+                this.renderSlides()
+            }
+            <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="sr-only">Previous</span>
+            </a>
+            <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="sr-only">Next</span>
+            </a>
         </div>
-    )
-}*/
-
+      )
+    }
+    
+    render() {
+        return (
+            <div className="slideshow-container" style={{margin: "0 auto"}}>
+                {this.renderCarousel()}
+            </div>
+        )
+    }
+}
 
 export default Slideshow;

@@ -2,30 +2,10 @@ import React, {Component} from 'react';
 import Slideshow from '../components/Slideshow'
 
 class Imo extends Component{
-    
-    constructor(){
-        super()
-        this.state = {
-            images: []
-        }
+    state = {
+        imageUrl:"5aff8d5761b4620ebcbab97b"
     }
 
-    componentWillMount(){
-        let list = [
-            "https://drive.google.com/uc?id=1J-elc7LPIRy-__ie-MIwWHBH7mOML3pC",
-            "https://drive.google.com/uc?id=199DjdThzCXqQCEgeHiMZ6z9jHL40LeGx",
-            "https://drive.google.com/uc?id=1AkhjV-fW_UFrBdGSHaBopTnCcqrX4zLL",
-            "https://drive.google.com/uc?id=1h0XRehe8tPAjIXxIFcGb3ORTukEPnwO9",
-            "https://drive.google.com/uc?id=1c4RwzVNQkg2Gsvr7V-UgLzHhCnfFI2Zg",
-            "https://drive.google.com/uc?id=1fxeKvldi5mSPXw6fHxblfrMZNTfV1slY",
-            "https://drive.google.com/uc?id=13PiSzAWYysbFTHbIzHlxbqZvFxyJeIJ4"
-       ]
-
-        this.setState({
-            images: list
-        })
-    }
-    
     render() {
         return (
         
@@ -33,7 +13,7 @@ class Imo extends Component{
             <h1>A Summer in UIUC's Research Park</h1>
             <br/>
             <div className="my-3">
-                <Slideshow images={this.state.images}/>
+                <Slideshow imageUrl={this.state.imageUrl}/>
             </div>
 
             <section className="my-5">

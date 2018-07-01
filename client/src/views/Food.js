@@ -3,34 +3,12 @@ import Slideshow from '../components/Slideshow';
 
 import './Musical.css'
 
-/*
-let HOST = ""
-if (process.env.NODE_ENV === 'production'){
-    HOST = "http://mikeliu8492.herokuapp.com"
-}
-else {
-    HOST = "http://wwww.localhost:5000"
-}
-*/
-
 class Food extends Component {
 
-    componentWillMount(){
-        let list = [
-            "https://drive.google.com/uc?id=15Aau4WCnqXHUmx2wzKIjeEkE_16X9jCs",
-            "https://drive.google.com/uc?id=1BfP9-hzknZ5mNuFh9z2WHWG77qapc810",
-            "https://drive.google.com/uc?id=1GdVGif5F0rsvw5mMYx0cT4rk1ScJ1xpX",
-            "https://drive.google.com/uc?id=1gUESkQoPOkYvCdippVQnByyzY6nsGCi5",
-            "https://drive.google.com/uc?id=1fiG50jD3BMzSvWvcJy59hrpoplwECCOa",
-            "https://drive.google.com/uc?id=1vGN99M5fSGL5XBOzdFkIJNewGZGOYWSw",
-            "https://drive.google.com/uc?id=1G5i07OfAj2IxQyBrseWzKY0vwJdqZYvS",
-            "https://drive.google.com/uc?id=1Hov_viqmH3dd_JwMfz0BJsUl-uNPS8GM"
-        ]
-
-        this.setState({
-            images: list
-        })
+    state = {
+        imageUrl: "5aff8d0f8d807d09d4723fb0"
     }
+
 
     render() {
         return (
@@ -40,7 +18,7 @@ class Food extends Component {
             
             <br/>
             <div>
-                <Slideshow images={this.state.images}/>
+                <Slideshow imageUrl={this.state.imageUrl}/>
             </div>
             
             <br/>

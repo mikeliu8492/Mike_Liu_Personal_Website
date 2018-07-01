@@ -3,45 +3,17 @@ import Slideshow from '../components/Slideshow'
 
 class Microsoft extends Component{
     
-    constructor(){
-        super()
-        this.state = {
-            images: []
-        }
+    state = {
+        imageUrl:"5b393733d880acb78cb74478"
     }
-
-    componentWillMount(){
-        let list = [
-           "https://drive.google.com/uc?id=17YtaqRUBe_jbhr3qH-vYcBVouv7KBrgc",
-           "https://drive.google.com/uc?id=1SjlbosB2d8MDFThr6G0ciM9HhKcWqY9D",
-           "https://drive.google.com/uc?id=1vMrXXdAlo2V9uVyZvG5UfZARzC4y-BCi",
-           "https://drive.google.com/uc?id=1WClYGlxLG1Fqs9YX152byFys82vxZyCW",
-           "https://drive.google.com/uc?id=15ReP3tYzIuSlBUE9tO7VVIiXTBmwxoW5",
-           "https://drive.google.com/uc?id=1zyz1c-LHQvw_EcLC1sx5pu7XVb9BCzjB",
-           "https://drive.google.com/uc?id=1nn-N_k9Br9guaDq6nrdrbUwMzidkuR3r",
-           "https://drive.google.com/uc?id=1lP9ePsNlsQev_28oh0vltNHbYmK4HEk_",
-           "https://drive.google.com/uc?id=1tdHWRLilFu-kI25YsVAH3tnRWpm4p2iB",
-           "https://drive.google.com/uc?id=1eyL_Et0ggXOybp5fQ2XcvtfUTNakypPF",
-            "https://drive.google.com/uc?id=1RffADjcEY3SqlLGyxUA-wRnoYf-wi8o6",
-            "https://drive.google.com/uc?id=1Brt5sIHOBP6i3rK7ZrX_PXfng0kLUIam",
-            "https://drive.google.com/uc?id=1yj16ui62qgT9_V1plIaBi662ymmg6cjK",
-            "https://drive.google.com/uc?id=1CGHOK-_5V4-6xqq18ATEiilvmUzaxOVe",
-            "https://drive.google.com/uc?id=1RJnZrCqR8NGFaZ7-UTNQuTlp7bwUDn21",
-            "https://drive.google.com/uc?id=1zZN3MwO-ANPyIpBufLwshM8WkO7CjGiu"
-       ]
-
-        this.setState({
-            images: list
-        })
-    }
-    
+   
     render() {
         return (<div className="my-5">
             <h1 >West Coast, Best Coast, Microsoft!</h1>
             <br/>
             
             <div className="my-3">
-                <Slideshow images={this.state.images}/>
+                <Slideshow imageUrl={this.state.imageUrl}/>
             </div>
 
             <section className="my-5">
