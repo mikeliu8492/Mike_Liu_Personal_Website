@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Slideshow.css'
 
-import axios from 'axios'
+import Axios from 'axios'
 
 import firebase from 'firebase'
 
@@ -22,23 +22,28 @@ class Slideshow extends Component
         }
     }
     
-    async componentWillMount() {
-
-        const {currentUser} = firebase.auth()
-        try {
-            if(currentUser === null) {
-                await firebase.auth().signInWithEmailAndPassword(process.env.REACT_APP_USERNAME, process.env.REACT_APP_PASSWORD)
-            }
-            const token = firebase.auth().currentUser.getIdToken(false)
+    componentWillMount() {
+        firebase.auth().signInWithEmailAndPassword(process.env.REACT_APP_USERNAME, process.env.REACT_APP_PASSWORD)
+        .then(()=> {
+            return firebase.auth().currentUser.getIdToken(false)
+        })
+        .then(token => {
             const {imageUrl} = this.props
-            const response = await axios.get(`${HOST}/api/gallery/${imageUrl}`, {headers: { Authorization: `Bearer ${token}`}})
+            const URL = `${HOST}/api/gallery/${imageUrl}`
+            Axios.defaults.headers.common['Authorization'] =  'Bearer ' + token
+            const headers = {
+                withCredentials: true,
+                headers: { Authorization: 'Bearer ' + token }
+            }
+            return Axios.get(URL, headers)
+        })
+        .then(response => {
             const gallery = response.data.picture_urls
             this.setState({imageList: gallery})
-
-        }
-        catch(err) {
+        })
+        .catch((err) => {
             console.log(err.toString())
-        }
+        })
     }
 
     renderSlides() {
@@ -67,7 +72,11 @@ class Slideshow extends Component
 
     renderCarousel() {
         if (this.state.imageList.length === 0) {
-            return (<h4>Slideshow unavailable.</h4>) 
+            return (
+                <div className="text-center">
+                    <h4>Slideshow unavailable.</h4>
+                </div>
+            ) 
         }
 
         return(
