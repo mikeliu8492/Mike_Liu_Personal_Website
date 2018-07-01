@@ -66,7 +66,6 @@ const verifyToken = (token) => {
 }
 
 const middlewareSecurityFunction = (req, res, next) => {
-    console.log(req.headers.authorization)
         if(process.env.NODE_ENV === 'production') {
             extractBearerToken(req.headers)
             .then(token => {

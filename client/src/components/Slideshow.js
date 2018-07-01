@@ -18,7 +18,8 @@ class Slideshow extends Component
     constructor(props) {
         super(props)
         this.state = {
-            imageList: []
+            imageList: [],
+            status: "Loading"
         }
     }
     
@@ -43,6 +44,7 @@ class Slideshow extends Component
         })
         .catch((err) => {
             console.log(err.toString())
+            this.setState({status: "Slideshow Unavailable"})
         })
     }
 
@@ -74,7 +76,7 @@ class Slideshow extends Component
         if (this.state.imageList.length === 0) {
             return (
                 <div className="text-center">
-                    <h4>Slideshow unavailable.</h4>
+                    <h4>{this.state.status}</h4>
                 </div>
             ) 
         }
