@@ -31,10 +31,8 @@ class Slideshow extends Component
         .then(token => {
             const {imageUrl} = this.props
             const URL = `${HOST}/api/gallery/${imageUrl}`
-            Axios.defaults.headers.common['Authorization'] =  'Bearer ' + token
             const headers = {
-                withCredentials: true,
-                headers: { Authorization: 'Bearer ' + token }
+                headers: { Authorization: `Bearer ${token}` }
             }
             return Axios.get(URL, headers)
         })
