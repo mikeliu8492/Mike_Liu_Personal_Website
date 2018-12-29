@@ -29,13 +29,14 @@ class Header extends Component {
                                     </li>
 
                                     <li className="nav-item active dropdown">
-                                        <a className="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a className="nav-link dropdown-toggle" href="work_history_dropdown" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Work Experience
                                         </a>
                                         
                                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <Link to="/work" className = "dropdown-item" title="Complete Journey">Complete Journey</Link>
                                             <div className="dropdown-divider" style={{borderColor: "black"}}></div>
+                                            <Link to="/epic" className = "dropdown-item" title="Epic Systems">Epic Systems</Link>
                                             <Link to="/microsoft" className = "dropdown-item" title="Microsoft">Microsoft</Link>
                                             <Link to="/imo" className = "dropdown-item" title="Intelligent Medical Objects">IMO</Link>
                                         </div>

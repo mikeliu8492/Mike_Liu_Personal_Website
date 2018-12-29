@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 const companyArray = [
-    {picture: "https://drive.google.com/uc?id=1TwegjwZzM-UiB7BPXHYoXo-kRpo65C8B", name: "Epic Systems (incoming developer, stay tuned for updates coming up soon!)", alternateText: "Epic Systems", linkUrl: "/work"},
+    {picture: "https://drive.google.com/uc?id=1TwegjwZzM-UiB7BPXHYoXo-kRpo65C8B", name: "Epic Systems", alternateText: "Epic Systems", linkUrl: "/epic"},
     {picture: "https://drive.google.com/uc?id=1j_PWu67Hhp7l-3paWKw54rh0UQvkoFeZ", name: "Microsoft",  alternateText: "Microsoft", linkUrl: "/microsoft"},
     {picture: "https://drive.google.com/uc?id=1nGu96qxy6bzcpC8uDvTRrHGy5FaTxOIS", name: "Intelligent Medical Objects", alternateText: "Intelligent Medical Objects", linkUrl: "/imo"},
 ]
