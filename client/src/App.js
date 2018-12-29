@@ -13,7 +13,8 @@ import AskMeAnything from './views/AskMeAnything'
 import WorkExperience from './views/WorkExperience';
 import Food from './views/Food';
 import Microsoft from './views/Microsoft';
-import Imo from './views/Imo'
+import Imo from './views/Imo';
+import Epic from './views/Epic';
 import Redirect from './views/Redirect'
 import Header from './components/Header'
 
@@ -62,6 +63,7 @@ class App extends Component {
                 <Route exact path="/ask_me_anything" component={AskMeAnything}/>
                 <Route exact path="/microsoft" component={Microsoft}/>
                 <Route exact path="/imo" component={Imo}/>
+                <Route exact path="/epic" component={Epic}/>
                 <Route component={Redirect}/>
               </Switch>
             </section>
