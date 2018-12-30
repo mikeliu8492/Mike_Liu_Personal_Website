@@ -4,7 +4,7 @@ import Slideshow from '../components/Slideshow';
 class Epic extends Component{
     
     state = {
-        imageUrl:"5c27d92288486a1158ac732f"
+        imageUrl:"5c2816953d457d314c5f4891"
     }
    
     render() {
